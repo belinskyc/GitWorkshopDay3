@@ -1,21 +1,23 @@
 {
   rm(list=ls());  options(show.error.locations = TRUE);
   
+  #### Just adding in some comments here
+  #### To show that Git can figure out
+  #### that these lines have been added and
+  #### Git will automatically offset the lines below
+  
   ### A numeric vector with one value
   temperature = 80;  # a vector, temperature, with one value, 80
 
-  ### A numeric vector with eight values
-  JulyTemps = c(90, 88, 86, 77,81, 83, 80, 80);  
+  ### A numeric vector with eight values (note: the line below has only a small change -- a space added)
+  JulyTemps = c(90, 88, 86, 77, 81, 83, 80, 80);  
   
   ### An integer vector
-  intValues = as.integer(c(3,4,5));
+  intValues = as.integer(c(2,3,4));
   
   ### Adding 1 to integers creates a numeric vector
   intValues2 = intValues + 1;
   
-  ### You need to be explicit and declare 1 as an integer
-  intValues3 = intValues + as.integer(1);
-
   ### A Boolean vector given whether there was rain  
   rainyDaysInJuly = c(FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, TRUE, FALSE);
 
@@ -27,7 +29,7 @@
     cat("day", i, (JulyTemps[i] > 85), "\n");
   }     
   
-  ### Using a conditional statement to create a Boolean vector
+  ### Change a line and Git treats it as deleted and added line (orig: Using a conditional statement to create a Boolean vector)
   hotterThan85 = (JulyTemps > 85);
   
   ### Create a copy of JulyTemps and add names to the values
